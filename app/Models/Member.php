@@ -10,5 +10,5 @@ class Member extends Model
     protected $primaryKey = 'id_member';
     protected $table = 'member';
 
-    protected $fillable = ['nama', 'alamat', 'jenis_kelamin', 'tlp'];
+    protected $fillable = ['nama_member', 'alamat', 'jenis_kelamin', 'tlp'];
 }

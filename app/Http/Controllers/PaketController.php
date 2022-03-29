@@ -40,14 +40,16 @@ class PaketController extends Controller
 
     public function getAll()
     {
-        $data['count'] = Paket::count();
-        $data['paket'] = Paket::get();
-        return response()->json(['data' => $data]);
+        // $data['count'] = Paket::count();
+        // $data['paket'] = Paket::get();
+        // return response()->json(['data' => $data]);
+        $data =Paket::get();
+        return response()->json($data);
     }
 
     public function getById($id_paket)
     {
-        $data['paket'] = Paket::where('id_paket', '=', $id_paket)->get();
+        $data['paket'] = Paket::where('id_paket', '=', $id_paket)->first();
         return response()->json(['data' => $data]);
     }
 

@@ -45,39 +45,14 @@ class PaketController extends Controller
         // $data['count'] = Paket::count();
         // $data['paket'] = Paket::get();
         // return response()->json(['data' => $data]);
-<<<<<<< HEAD
         $data =Paket::get();
-=======
-
-        // $data = Paket::get();
-        // return response()->json([
-        //     'success' => true,
-        //     'data' => $data
-        // ]);
-        $data = Paket::get();
->>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
         return response()->json($data);
     }
 
     public function getById($id)
     {
-<<<<<<< HEAD
-        $data['paket'] = Paket::where('id_paket', '=', $id_paket)->first();
+        $data['paket'] = Paket::where('id_paket', '=', $id)->first();
         return response()->json(['data' => $data]);
-=======
-        // $data['paket'] = Paket::where('id_paket', '=', $id_paket)->get();
-        // return response()->json(['data' => $data]);
-
-        // $data = Paket::where('id', '=', $id)->first();
-
-        // return response()->json([
-        //     'success' => true,
-        //     'data' => $data
-        // ]);
-
-        $data = Paket::where('id_paket', $id)->first();
-        return response()->json($data);
->>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
     }
 
     public function update(Request $request, $id)

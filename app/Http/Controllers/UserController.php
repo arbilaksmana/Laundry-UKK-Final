@@ -78,16 +78,10 @@ class UserController extends Controller
 
     public function getAll()
     {
-<<<<<<< HEAD
         $data = User::get();
         // $data = DB::table('users')->join('outlet', 'users.id_outlet', '=', 'outlet.id_outlet')
         //     ->select('users.*', 'outlet.id_outlet')
         //     ->get();
-=======
-        $data = DB::table('users')->join('outlet', 'users.id_outlet', '=', 'outlet.id_outlet')
-            ->select('users.*', 'outlet.nama')
-            ->get();
->>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
 
         return response()->json($data);
     }
@@ -103,21 +97,13 @@ class UserController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'role' => 'required',
-<<<<<<< HEAD
             'nama' => 'required',
-=======
-            'name' => 'required',
->>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
             'id_outlet' => 'required'
         ]);
 
         $user = User::where('id', '=', $id)->first();
 
-<<<<<<< HEAD
         $user->nama = $request->nama;
-=======
-        $user->name = $request->name;
->>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
         $user->username = $request->username;
         $user->role = $request->role;
         $user->id_outlet = $request->id_outlet;

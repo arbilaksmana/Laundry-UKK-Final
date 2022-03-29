@@ -90,4 +90,8 @@ class OutletController extends Controller
             ]);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0

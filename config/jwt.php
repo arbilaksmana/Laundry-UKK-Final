@@ -101,6 +101,7 @@ return [
     |
     */
 
+    //Set Waktu Login Check
     'ttl' => env('JWT_TTL', 60),
 
     /*

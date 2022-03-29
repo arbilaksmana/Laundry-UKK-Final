@@ -1,5 +1,9 @@
 <?php
 
+// header('Access-Control-Allow-Origin:  http://127.0.0.1:8000');
+// header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
+// header('Access-Control-Allow-Methods:  POST, PUT');
+
 return [
 
     /*
@@ -15,9 +19,16 @@ return [
     |
     */
 
+<<<<<<< HEAD
+=======
+    // 'paths' => ['api/*', 'sanctum/csrf-cookie'],
+
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
     'paths' => ['api/*'],
 
     'allowed_methods' => ['*'],
+
+    // 'allowed_origins' => ['http://localhost:8081'],
 
     'allowed_origins' => ['*'],
 

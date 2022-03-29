@@ -8,7 +8,7 @@ use Exception;
 use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
 use Illuminate\Http\Request;
 
-class JwtMiddleware extends BaseMiddleware
+class JwtMiddleware
 {
     /**
      * Handle an incoming request.
@@ -36,6 +36,7 @@ class JwtMiddleware extends BaseMiddleware
             return $next($request);
         }
 
-        return $this->response->errorResponse('You are not authorized to access this route');
+        // return $this->response->errorResponse('You are not authorized to access this route');
+        return response()->json('You are not authorized to access this route');
     }
 }

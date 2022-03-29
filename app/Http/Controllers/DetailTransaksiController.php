@@ -11,7 +11,11 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class DetailTransaksiController extends Controller
 {
+<<<<<<< HEAD
     // public $user;
+=======
+    public $user;
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
     public function __construct()
     {
         $this->user = JWTAuth::parseToken()->authenticate();
@@ -26,14 +30,20 @@ class DetailTransaksiController extends Controller
         ]);
 
         if ($validator->fails()) {
+<<<<<<< HEAD
             // return $this->response->errorResponse($validator->fails());
+=======
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
             return response()->json($validator->errors());
         }
 
         $detail = new DetailTransaksi();
         $detail->id_transaksi = $request->id_transaksi;
         $detail->id_paket = $request->id_paket;
+<<<<<<< HEAD
         // $detail->subtotal = $request->subtotal;
+=======
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
 
         //GET HARGA PAKET
         $paket = Paket::where('id_paket', '=', $detail->id_paket)->first();
@@ -51,8 +61,11 @@ class DetailTransaksiController extends Controller
             'message' => 'Berhasil Tambah Detail Transaksi',
             'data' => $data
         ]);
+<<<<<<< HEAD
 
         // return $this->response->successResponseData('Berhasil tambah detil transaksi', $data);
+=======
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
     }
 
     public function getById($id)
@@ -74,4 +87,8 @@ class DetailTransaksiController extends Controller
             'total' => $total
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 86174792523889bc51d0dd98860dc0eb34db59a0
